@@ -18,9 +18,10 @@ jobs:
       with:
         python-version: 3.11
 
-    - uses: psf/black@stable
-      with:
-        options: "--check --verbose"
-        src: "."
-        jupyter: False
-        version: "21.5b1"
+    
+    - name: list all files
+      run: |
+        ls -la
+
+    - name: use black formatting
+      uses: psf/black@stable
