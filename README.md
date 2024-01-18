@@ -8,8 +8,9 @@ The ASCII Art Cat Speaking package provides a simple Python function to display 
 
 ## Installation
 
-No installation is required for this package. You can simply copy the provided Python function into your project and use it as needed.
-
+```bash
+pip install catsay
+```
 ## Usage
 
 1. Import the `catsay` function from the `cat` package.
