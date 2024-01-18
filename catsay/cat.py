@@ -2,22 +2,15 @@ import sys
 
 
 def catsay(input_string: str):
-    """make a cat say anything you pass
-    
-    
-    
-    
-    
-    
-                                                    """
+    """make a cat say anything you pass"""
 
     length = len(input_string) + 2
 
     cat_message = f"""
-           {"-"*length}       
+           {"-"*length}
           ( {input_string} )
-           {"-"*length}   
-          |/     
+           {"-"*length}
+          |/
     /\_/\\
    ( o.o )
     > ^ <  ,"",
