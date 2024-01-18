@@ -19,7 +19,7 @@ pip install catsay
 Example:
 
 ```python
-from cat import catsay
+from catsay import catsay
 
 message = "Hello, I am a cat!"
 catsay(message)
