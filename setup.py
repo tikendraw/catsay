@@ -3,7 +3,7 @@ from setuptools import setup
 with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()
 
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 REPO_NAME = "catsay"
 PKG_NAME= "catsay"
 AUTHOR_USER_NAME = "tikendraw"
