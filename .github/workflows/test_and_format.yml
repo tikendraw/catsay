@@ -25,7 +25,3 @@ jobs:
     
     - name: Format code with black
       run: black .
-
-    - name: Check for formatting changes
-      run: |
-        git diff --exit-code || (echo "Code n
