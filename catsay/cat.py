@@ -2,7 +2,7 @@ import sys
 
 
 def catsay(input_string: str):
-    """make             a                   cat say anything                    you pass"""
+    """make             a                    cat say anything                    you pass"""
 
     length = len(input_string) + 2
 
