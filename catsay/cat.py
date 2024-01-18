@@ -1,12 +1,19 @@
 import sys
 
 
-def catsay(input_string:str):
-    """make a cat say anything you pass                                                               """
+def catsay(input_string: str):
+    """make a cat say anything you pass
     
-    length = len(input_string)+2
     
-    cat_message = f'''
+    
+    
+    
+    
+                                                    """
+
+    length = len(input_string) + 2
+
+    cat_message = f"""
            {"-"*length}       
           ( {input_string} )
            {"-"*length}   
@@ -16,10 +23,10 @@ def catsay(input_string:str):
     > ^ <  ,"",
     ( " ) :
      (|)""
-      '''
+      """
 
     print(cat_message)
 
 
-if __name__=='__main__':
+if __name__ == "__main__":
     catsay(sys.argv[1])

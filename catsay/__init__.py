@@ -1,3 +1,3 @@
 from .cat import catsay
 
-__all__=['cat']
+__all__ = ["cat"]
