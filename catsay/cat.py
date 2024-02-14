@@ -2,11 +2,7 @@ import sys
 
 
 def catsay(input_string: str):
-    
-    
-    
-    
-    
+
     """make a cat say anything you pass
     
     
@@ -26,10 +22,8 @@ def catsay(input_string: str):
      (|)""
       """
 
-    print(                 
-          cat_message             )
+    print(cat_message)
 
 
 if __name__ == "__main__":
-    catsay(
-        sys.argv[1])
+    catsay(sys.argv[1])
