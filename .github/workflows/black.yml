@@ -6,16 +6,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0 # Fetch entire history so we can get the previous commit message
       - name: Check files using the black formatter
         uses: datadog/action-py-black-formatter@v2.1
         id: action_black
-      - name: Commit and push changes
-        run: |
-          COMMIT_MESSAGE=$(git log --format=%B -n 1 | sed "s/.*/& :art: Formatted with psf\\/black/)")
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Action"
-          git add .
-          git commit -m "${COMMIT_MESSAGE}$(echo)"
-          git push origin HEAD
+      - name: Create Pull Request
+        if: steps.action_black.outputs.is_formatted == 'true'
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "Format Python code with psf/black push"
+          commit-message: ":art: Format Python code with psf/black"
+          body: |
+            There appear to be some python formatting errors in ${{ github.sha }}. This pull request
+            uses the [psf/black](https://github.com/psf/black) formatter to fix these issues.
+          base: ${{ github.head_ref }} # Creates pull request onto pull request or commit branch
+          branch: ${{ github.head_ref}}
