@@ -13,7 +13,7 @@ jobs:
         id: action_black
       - name: Commit and push changes
         run: |
-          COMMIT_MESSAGE=$(git log --format=%B -n 1 | sed "s/.*/& :art: Formatted with psf\/black/)")
+          COMMIT_MESSAGE=$(git log --format=%B -n 1 | sed "s/.*/& :art: Formatted with psf\\/black/)")
           git config user.email "actions@github.com"
           git config user.name "GitHub Action"
           git add .
